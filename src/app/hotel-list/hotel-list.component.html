@@ -1,0 +1,130 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<div class="container text-center"style="padding-top:2%">  
+     
+
+    <div class="list row">
+        <div class="col-md-6">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control " placeholder="Search by hotel name" [(ngModel)]="hotelname"/>
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" (click)="searchByName()">
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <label class="col-2">
+            <button routerLink="/create-hotel"type="button" class="btn btn-outline-primary col" >Add Hotel</button>
+        </label>
+
+        <label class="col-2">
+        <div class="dropdown btn btn-outline-primary col "style="margin-top:0%;">
+        
+        <a class=" buttn"  >
+            Fetch Hotel By Ratings
+        </a>
+        
+        <div class="dropdown-options">
+            <a (click)="fetchHotelByRating1()"type="button">1</a>
+            <a (click)="fetchHotelByRating2()"type="button">2</a>
+            <a (click)="fetchHotelByRating3()"type="button">3</a>
+            <a (click)="fetchHotelByRating4()"type="button">4</a>
+            <a (click)="fetchHotelByRating5()"type="button">5</a>
+        </div>
+        </div>
+        </label>
+
+        <label scope="row" *ngIf="hotels.length !== 0" class="col-2" >
+            <div class="text-center">
+                <button type="button" (click) = "removeAllEmps()" class="btn btn-outline-danger">Delete All Records</button>
+            </div>
+        </label> 
+    </div>
+
+    
+    
+</div>
+
+
+<div  style="margin-right:4%;margin-left:3%">
+    <a href="/hotel-home" style="color: black;"><i class="fa fa-mail-reply" style="font-size:20px;padding-top: 1%;margin-left: 2%;"></i> back</a>
+    <h2> Hotel List</h2>
+<table class = "table table-striped table-secondary border table-hover ">
+
+    <thead>
+        <tr>           
+            <th>Hotel Name</th>
+            <th>Ratings</th>
+            <th>Place</th>
+            <th>Amenities</th>
+            <th>Meals</th>
+            <td ><b>Cost </b>/night</td>
+            <th>Location</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let hotel of hotels">
+            <td id="textclr"> {{ hotel.hotelName }} </td>
+            <td id="textclr"> {{ hotel.ratings }} </td>
+            <td id="textclr"> {{ hotel.place }} </td>
+            <td id="textclr"> {{ hotel.amenities }} </td>
+            <td id="textclr"> {{ hotel.meals }} </td>
+            <td id="textclr">{{hotel.cost}}</td>
+            <td id="textclr"><i class="fa fa-map-pin" style="font-size:24px;color:rgb(194, 6, 37)"></i><a href="{{hotel.location}}"><br/>{{ hotel.hotelName }}</a></td>
+            <td id="textclr" colspan=".25">{{hotel.email}}</td>
+            <td id="textclr"> {{ hotel.contact}} </td>
+            
+            <td>
+                <div class="btn-group" role="group" aria-label="Basic outlined example">
+                    <button type="button" (click) = "updateHotel(hotel.id)" class="btn btn-outline-primary">Update</button>
+                    <button type="button" (click) = "confirmDelete(hotel)" class="btn btn-outline-danger">Delete</button>
+                    <button type="button" (click) = "hotelDetails(hotel.id)" class="btn btn-outline-primary">View</button>
+                </div> 
+            </td>
+        </tr>
+        <!--<tr scope="row" *ngIf="hotels.length !== 0">
+            <td colspan="9" class="text-center">
+                <button type="button" (click) = "removeAllEmps()" class="btn btn-outline-danger">Delete All Records</button>
+            </td>
+        </tr>-->
+        <tr scope="row" *ngIf="hotels.length === 0">
+            <td colspan="10" class="text-center">No record found</td>
+        </tr>
+        
+    </tbody>
+</table>
+
+</div>
+<!-- <button (click) = "updateHotel(hotel.id)" class = "btn btn-info"> Update</button>
+<button (click) = "deleteHotel(hotel.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+<button (click) = "hotelDetails(hotel.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+
+<button (click) = "confirmDelete(employee)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>-->
+
+
+<!-- <head>
+    <script>
+        function confirmDelete() {
+             var status= confirm("You want to delete this record?");
+              if (status==true) {
+                    return true;
+                   }
+              else{
+                 
+                   event.preventDefault();
+                   return false;
+                   }
+               
+        }
+        </script>
+</head> 
+
+
+onclick="confirmDelete()"   -->

@@ -1,0 +1,11 @@
+#topic{
+    font-family: Garamond, serif;
+    color:rgb(88, 12, 12);
+    font-size: 300%;
+    font-weight: 700;
+    text-align: center;
+}
+#errormsg{
+    color:red;
+    text-align: center;
+}

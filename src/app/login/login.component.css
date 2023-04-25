@@ -1,0 +1,16 @@
+#body{
+    display:grid;
+    margin:0;
+    place-items:center;
+    padding:0 32px;
+    font-family:'Exo',sans-serif;
+    padding-top: 2%;
+    padding-left: 38%;
+    background: transparent;
+    padding-bottom: 20%;
+    position: absolute;
+    }
+#errormsg{
+    color:red;
+}
+    

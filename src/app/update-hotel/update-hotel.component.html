@@ -1,0 +1,70 @@
+<div class="col-md-6 offset-md-3 bg-secondary"style="padding-top:3%;padding-bottom:2%;">
+    <h2 id="update"> Update Hotel </h2>
+    <form (ngSubmit) = "onSubmit()" class="text-white">
+
+        <div class="form-group">
+            <label> Hotel Name</label>
+            <input type="text" class ="form-control" id = "hotelName"
+                [(ngModel)] = "hotel.hotelName" name = "hotelName">
+        </div>
+    
+        <div class="form-group">
+            <label> Ratings </label>
+            <input type="number" class ="form-control" id = "ratings"
+                [(ngModel)] = "hotel.ratings" name = "ratings">
+        </div>
+    
+        <div class="form-group">
+            <label> Place </label>
+            <input type="text" class ="form-control" id = "place"
+                [(ngModel)] = "hotel.place" name = "place">
+        </div>
+
+        <div class="form-group">
+            <label> State </label>
+            <input type="text" class ="form-control" id = "state"
+                [(ngModel)] = "hotel.state" name = "state">
+        </div>
+
+        <div class="form-group">
+            <label> Amenities </label>
+            <input type="text" class ="form-control" id = "amenities"
+                [(ngModel)] = "hotel.amenities" name = "amenities">
+        </div>
+
+        <div class="form-group">
+            <label> Meals </label>
+            <input type="text" class ="form-control" id = "meals"
+                [(ngModel)] = "hotel.meals" name = "meals">
+        </div>
+
+        <div class="form-group">
+            <label> Cost </label>
+            <input type="text" class ="form-control" id = "cost"
+                [(ngModel)] = "hotel.cost" name = "cost">
+        </div>
+
+        <div class="form-group">
+            <label> Location </label>
+            <input type="text" class ="form-control" id = "location"
+                [(ngModel)] = "hotel.location" name = "location">
+        </div>
+
+        <div class="form-group">
+            <label> Email </label>
+            <input type="email" class ="form-control" id = "email"
+                [(ngModel)] = "hotel.email" name = "email">
+        </div>
+
+        <div class="form-group">
+            <label> Contact </label>
+            <input type="text" class ="form-control" id = "contact"
+                [(ngModel)] = "hotel.contact" name = "contact">
+        </div>
+
+    <div class="d-grid gap-0 d-md-flex justify-content-md-end" >
+        <button class="btn btn-success me-md-2"   type ="submit">Submit</button>
+    </div>
+    
+    </form>
+    </div> 

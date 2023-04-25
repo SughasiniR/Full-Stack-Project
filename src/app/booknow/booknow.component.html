@@ -1,0 +1,71 @@
+<div class="container text-center"style="padding-top:2%">  
+  <div class="list row">
+      <div class="col-md-8">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control " placeholder="Search by hotel name" [(ngModel)]="hotelname"/>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" (click)="searchByName()">
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <label class="col-2">
+        <div class="dropdown btn btn-outline-primary col "style="margin-top:0%;">
+        
+        <a class=" buttn"  >
+            Fetch Hotel By Rating
+        </a>
+        
+        <div class="dropdown-options">
+            <a (click)="fetchHotelByRating1()"type="button">1</a>
+            <a (click)="fetchHotelByRating2()"type="button">2</a>
+            <a (click)="fetchHotelByRating3()"type="button">3</a>
+            <a (click)="fetchHotelByRating4()"type="button">4</a>
+            <a (click)="fetchHotelByRating5()"type="button">5</a>
+        </div>
+        </div>
+        </label>   
+
+        <label class="col-2">
+          <div class="dropdown btn btn-outline-primary col "style="margin-top:0%;">
+          
+          <a class=" buttn"  >
+              Fetch Hotel By State
+          </a>
+          
+          <div class="dropdown-options">
+              <a (click)="fetchHotelByGoa()"type="button">Goa</a>
+              <a (click)="fetchHotelByHimachal()"type="button">Himachal Pradesh</a>
+              <a (click)="fetchHotelByDelhi()"type="button">Delhi</a>
+              <a (click)="fetchHotelByKarnataka()"type="button">Karnataka</a>
+              
+          </div>
+          </div>
+          </label>   
+
+  </div>  
+</div>
+
+<div class="container" style="padding-left: 5%;">
+  <form > 
+    <a href="/hotel-home" style="color: black;"><i class="fa fa-mail-reply" style="font-size:24px;padding-top: 1%;"></i> back</a>
+  </form>
+  <div class="row" style="padding-top: 2%;">
+    <div class="col-md-4  my-5" *ngFor = "let hotel of hotels">   
+      <div class="card" style="width: 18rem;">
+        <img src="../assets/{{hotel.id}}.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{hotel.hotelName}}</h5>
+        <p class="card-text">You can Explore {{hotel.amenities}}</p>
+        <button type="button" (click) = "hotelDetails(hotel.id)" class="btn btn-outline-primary">View</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

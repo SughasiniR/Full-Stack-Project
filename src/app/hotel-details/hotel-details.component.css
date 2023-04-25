@@ -1,0 +1,27 @@
+#hotelName{
+    font-family: Georgia;
+    font-size:250%;
+    color: rgb(58, 5, 14);
+    padding-top:20px;
+    padding-bottom:0px;
+}
+#place{
+    color: rgb(146, 33, 52);
+    font-size:150%;
+    padding-top:0px;
+}
+#amenitiessize{
+    font-size: 110%;
+}
+#mealssize{
+    font-size: 110%;
+}
+#sideheading{
+    font-size: 120%;
+}
+#costsize{
+    font-size: 110%;
+}
+#foot{
+    padding-bottom: 5%;
+}

@@ -1,0 +1,87 @@
+
+    
+    <div class="col-md-6 offset-md-3 bg-secondary "style="padding-top:3%;padding-bottom:2%;">
+        <h2 id="topic"> Create Hotel </h2>
+    <form (ngSubmit) = "onSubmit()" class="text-white">
+    
+        <div class="form-group">
+            <label> Hotel Name<a style="color:red;">* </a></label>
+            <input type="text" class ="form-control" id = "hotelName"
+                [(ngModel)] = "hotel.hotelName" name = "hotelName">
+                <a id="errormsg">{{errorname}}</a>
+        </div>
+    
+        <div class="form-group">
+            <label> Ratings <a style="color:red;">* </a></label>
+            <input type="number" class ="form-control" id = "ratings"
+                [(ngModel)] = "hotel.ratings" name = "ratings">
+                <a id="errormsg">{{errorrating}}</a>
+        </div>
+    
+        <div class="form-group">
+            <label> Place <a style="color:red;">* </a></label>
+            <input type="text" class ="form-control" id = "place"
+                [(ngModel)] = "hotel.place" name = "place">
+                <a id="errormsg">{{errorplace}}</a>
+        </div>
+
+        <div class="form-group">
+            <label> State <a style="color:red;">* </a></label>
+            <input type="text" class ="form-control" id = "state"
+                [(ngModel)] = "hotel.state" name = "state">
+                <a id="errormsg">{{errorstate}}</a>
+        </div>
+
+        <div class="form-group">
+            <label> Amenities <a style="color:red;">* </a></label>
+            <input type="text" class ="form-control" id = "amenities"
+                [(ngModel)] = "hotel.amenities" name = "amenities">
+                <a id="errormsg">{{erroramenities}}</a>
+        </div>
+
+        <div class="form-group">
+            <label> Meals <a style="color:red;">* </a></label>
+            <input type="text" class ="form-control" id = "meals"
+                [(ngModel)] = "hotel.meals" name = "meals">
+                <a id="errormsg">{{errormeals}}</a>
+        </div>
+
+        <div class="form-group">
+            <label> Cost <a style="color:red;">* </a></label>
+            <input type="text" class ="form-control" id = "cost"
+                [(ngModel)] = "hotel.cost" name = "cost">
+                <a id="errormsg">{{errorcost}}</a>
+        </div>
+
+        <div class="form-group">
+            <label> Location <a style="color:red;">* </a></label>
+            <input type="text" class ="form-control" id = "location"
+                [(ngModel)] = "hotel.location" name = "location">
+                <a id="errormsg">{{errorlocation}}</a>
+        </div>
+
+        <div class="form-group">
+            <label> Email <a style="color:red;">* </a></label>
+            <input type="email" class ="form-control" id = "email"
+                [(ngModel)] = "hotel.email" name = "email">
+                <a id="errormsg">{{erroremail}}</a>
+        </div>
+
+        <div class="form-group">
+            <label> Contact <a style="color:red;">* </a></label>
+            <input type="text" class ="form-control" id = "contact"
+                [(ngModel)] = "hotel.contact" name = "contact">
+                <a id="errormsg">{{errorcontact}}</a>
+        </div>
+        <a id="errormsg">{{errormsg}}</a>
+        <div class="d-grid gap-0 d-md-flex justify-content-md-end">
+        <button class="btn btn-success me-md-2" type ="submit">Submit</button>
+        </div>
+        
+        
+    </form>
+    
+    </div> 
+
+
+    

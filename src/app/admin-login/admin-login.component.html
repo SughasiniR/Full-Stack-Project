@@ -1,0 +1,43 @@
+<body class ="container">
+    <p style="text-align: center;font-size: 200%;">Welcome Back Admin!!!</p>
+    <i class="fa fa-user-circle" style="font-size:100px;text-align: center;"></i>
+    <br>
+  <form >
+    
+    <table  cellpadding =  "5"cellspacing = "0">
+    
+      <tr>     
+        <td> UserName </td>
+        <td> <input type = "text" placeholder="Enter Email"name="username" [(ngModel)]="username"required/></td>
+      </tr>
+      <tr><td colspan = "2" style = "text-align:center;"><p id="errormsg">{{errorname}}</p></td></tr>
+      <!--<tr>
+        <td colspan = "2" style = "text-align:center;">
+        <div class="alert alert-danger" *ngIf="invalidLogin">Username is required!</div>
+        </td>
+      </tr>-->
+      <tr>
+        <td> Password </td>
+        <td> <input type = "password"placeholder="Password" name="password"[(ngModel)]="password"required/></td>
+      </tr>
+      <tr><td colspan = "2" style = "text-align:center;"><p id="errormsg">{{errorpassword}}</p></td></tr>
+      <!--<tr>
+        <td colspan = "2" style = "text-align:center;">
+        <div class="alert alert-danger" *ngIf="invalidLogin" minlength="6">
+          <div *ngIf=true>Password must be at least 6 characters</div>
+        </div>
+      </td>
+      </tr>-->
+      <tr>
+        <td colspan = "2" style = "text-align:center;">
+        <button (click)=checkLogin() class="btn btn-success">
+          Login
+        </button>
+        </td>
+      </tr>
+  
+      
+      </table>
+    </form>
+    <a href="/login" style="color: rgb(10, 10, 10);"><i class="fa fa-refresh" style="font-size:24px"></i>Refresh</a>
+  </body>

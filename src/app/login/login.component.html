@@ -1,0 +1,51 @@
+
+<div class="container">
+  <a routerLink="/hotel-home" style="color: black;"><i class="fa fa-mail-reply" style="font-size:20px;padding-top: 2%;"></i> back</a>
+  </div>
+<div id="body">
+  <p style="text-align: center;font-size: 200%;padding-top: 0%;margin-top: 0%;">User Login</p>
+  <i class="fa fa-user-circle" style="font-size:100px;text-align: center;"></i>
+  <br>
+<form >
+  
+  <table  cellpadding =  "2"cellspacing = "0">
+  
+    <tr>     
+      <td> UserName<a style="color:red;">* </a> </td>
+      <td> <input type = "text" placeholder="Enter Email"name="username" [(ngModel)]="username"required/></td>
+    </tr>
+    <tr><td colspan = "2" style = "text-align:center;"><p id="errormsg">{{errorname}}</p></td></tr>
+    
+    <tr>
+      <td> Password<a style="color:red;">* </a> </td>
+      <td> <input type = "password"placeholder="Password" name="password"[(ngModel)]="password"required/></td>
+    </tr>
+    <tr><td colspan = "2" style = "text-align:center;"><p id="errormsg">{{errorpassword}}</p></td></tr>
+    
+    <a id="errormsg">{{errormsg}}</a>
+    <tr>
+      <td colspan = "2" style = "text-align:center;">
+      <button (click)=checkLogin() class="btn btn-success">
+        Login
+      </button>
+      </td>
+    </tr>
+    
+      <p style = "text-align:center;"><a style="color:red;">* </a> is required field</p>
+    
+
+    <tr>
+      <td colspan="2" style = "text-align:center;">Not yet Registered? <a href="/sign-in">Sign In</a></td>
+    </tr>
+    </table>
+  </form>
+  <a href="/login" style="color: rgb(10, 10, 10);"><i class="fa fa-refresh" style="font-size:24px"></i>Refresh</a>
+</div>
+
+<!--<div class="col-auto">
+  <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
+  <div class="input-group">
+    <div class="input-group-text">@</div>
+    <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Username">
+  </div>
+</div>-->

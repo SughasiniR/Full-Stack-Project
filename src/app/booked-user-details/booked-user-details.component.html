@@ -1,0 +1,65 @@
+
+  
+    <div class="container">
+    <a href="javascript:history.back()" style="color: black;"><i class="fa fa-mail-reply" style="font-size:20px;padding-top: 2%;"></i> back</a>
+    </div>
+
+  <div id="body">
+    <p><a style="color:red;padding-top: 0%;">* </a>Please Register before you Book Your Rooms !!!</p>
+  <a style="font-size:50px;text-align: center;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Registration</a>
+  <br>
+<div class="form-group">
+
+  <table >
+    <tr> 
+      <td> First Name<a style="color:red;padding-top: 0%;">* </a> </td>
+      <td class="mt-2 p-2"> <input type = "text" class="form-control" placeholder="First Name" [(ngModel)]="firstName"name="firstname" /></td>
+    </tr>
+    <a id="errormsg">{{errorfname}}</a>
+
+    <tr> 
+        <td> Last Name<a style="color:red;padding-top: 0%;">* </a> </td>
+        <td class="mt-2 p-2"> <input type = "text" class="form-control"placeholder="Last Name" [(ngModel)]="lastName"name="email"required/></td>
+    </tr>
+    <a id="errormsg">{{errorlname}}</a>
+      <tr>
+        <td>Gender</td>
+        <td ><input type="radio" id="male" name="gender"/>
+        <a for="male">Male  </a>
+        <input type="radio" id="female" name="gender"/>
+        <a for="female">Female</a>
+        </td>
+      </tr>
+    <tr> 
+      <td> Email <a style="color:red;padding-top: 0%;">* </a></td>
+      <td class="mt-2 p-2"> <input type = "email" class="form-control"placeholder="Email"[(ngModel)]="email"name="email"required/></td>
+    </tr>
+    <a id="errormsg">{{erroremail}}</a>
+    <tr>
+      <td> Address <a style="color:red;padding-top: 0%;">* </a></td>
+      <td class="mt-2 p-2"> <textarea type="text" class="form-control"[(ngModel)]="address"rows="4"placeholder="Address"></textarea></td>
+    </tr>
+    <a id="errormsg">{{erroraddress}}</a>
+    <tr> 
+      <td> No. of people <a style="color:red;padding-top: 0%;">* </a></td>
+      <td class="mt-2 p-2"> <input type = "number" class="form-control"[(ngModel)]="noOfPeople"placeholder="No. of people" name="no_of_people"required/></td>
+    </tr>
+    <a id="errormsg">{{errorppl}}</a>
+    <tr> 
+      <td> Date of Travel <a style="color:red;padding-top: 0%;">* </a></td>
+      <td class="mt-2 p-2"> <input type = "date" class="form-control"[(ngModel)]="dateOfTravel"placeholder="Date of Travel"name="date_of_travel"required/></td>
+    </tr>
+    <a id="errormsg">{{errordate}}</a>
+    <a id="errormsg">{{errormsg}}</a>
+    <tr>
+      <td colspan = "2" style = "text-align:center;">
+      <button  (click)="BookNow()" class="btn btn-success">Register</button>
+      </td>
+    </tr>
+    <p class="text-center"><a style="color:red;padding-top: 0%;">* </a>is required field</p>
+    
+  </table>
+</div>
+</div>
+  
+

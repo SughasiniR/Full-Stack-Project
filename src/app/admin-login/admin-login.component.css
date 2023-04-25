@@ -1,0 +1,14 @@
+body{
+    display:grid;
+    margin:0;
+    place-items:center;
+    padding:0 32px;
+    font-family:'Exo',sans-serif;
+    padding-top: 1%;
+    background: transparent;
+    padding-left: 18%;
+    position: fixed;
+    }
+#errormsg{
+    color:red;
+}
